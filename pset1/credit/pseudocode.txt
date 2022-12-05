@@ -1,0 +1,17 @@
+1. Prompt for imput
+2. Calculate checksum
+3. Check for card length and starting digits
+4. Print: AMEX, MASTERCARD, VISA, INVALID.
+
+AMEX: 15 digits, starts with 34 or 37.
+
+MASTERCARD: 16 digits, starts with 51, 52, 53, 54, or 55.
+
+[done]VISA: 13 or 16 digits, starts with 4.
+
+[Get digits by < num && > num.]
+[Get start by num % num.]
+
+378282246310005
+371449635398431
+4222222222222

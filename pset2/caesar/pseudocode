@@ -1,0 +1,28 @@
+            1.  Ensure single command-line argument
+            
+            2.  Make sure argument only contains decimal digits
+            
+            3.  If 1 、 2 failed, print "Usage: ./caesar key", and return value 1
+            
+            3.  Convert argument into integer  
+                Using <stdlib.h> atoi
+            
+            4.  Prompt for "plaintext: "
+            
+            5.  Shift the plaintext
+            
+            6.  print "ciphertext: ", and return value 0
+
+    if (argc != 2)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+    for (int i = 0, n = strlen(argv[1]); i < n; i++)
+    {
+        if (isdigit(argv[1][i]) == false)
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
+    }

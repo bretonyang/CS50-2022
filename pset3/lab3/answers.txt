@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: The time it cost to sort the sorted ones is faster than sort3, and its time to sort the reversed ones is more than sort2.
+
+sort2 uses: Merge sort
+
+How do you know?: Its average time to sort reversed ones is far faster than the other two sort, and the time it cost for sorted & reversed is close(n*logn).
+
+sort3 uses: Selection sort
+
+How do you know?: The time for sorted & reversed is close, but is way slower than sort2.

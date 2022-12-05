@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    On what interval is ln(x) defined?
+                </h3>
+                <form>
+                    <button type="button" onclick="wrongAns(this);">(-&#8734;, 0]</button>
+                    <button type="button" onclick="rightAns(this);">[1, &#8734;)</button>
+                    <button type="button" onclick="wrongAns(this);">(0, &#8734;)</button>
+                    <button type="button" onclick="wrongAns(this);">[0, &#8734;)</button>
+                </form>
+                <p id="ans1"><br></p>
+                <script>
+                    function wrongAns(id) {
+                        id.style.backgroundColor = 'red';
+                        document.getElementById('ans1').innerHTML = 'Incorrect';
+                        setTimeout(clear, 1000, id);
+                    }
+
+                    function rightAns(id) {
+                        id.style.backgroundColor = 'green';
+                        document.getElementById('ans1').innerHTML = 'Correct';
+                        setTimeout(clear, 1000, id);
+                    }
+
+                    function clear(id) {
+                        id.style.backgroundColor = '#d9edff';
+                        document.getElementById('ans1').innerHTML = '<br>';
+                    }
+
+                </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    Who is currently the world's richest person(2022/2)?
+                </h3>
+                <form id="secondForm">
+                    <input autocomplete="off" id="answer" placeholder="Answer here" type="text">
+                    <button type="submit">Check my answer</button>
+                </form>
+                <p id="ans2"><br></p>
+                <script>
+                    document.querySelector('#secondForm').addEventListener('submit', function(e) {
+                        let ans = document.querySelector('#answer');
+                        let element = document.getElementById('ans2');
+                        if (ans.value.toLowerCase() === 'elon musk') {
+                            element.innerHTML = 'Correct';
+                            ans.style.backgroundColor = 'green';
+                        }
+                        else {
+                            element.innerHTML = 'Incorrect';
+                            ans.style.backgroundColor = 'red';
+                        }
+                        e.preventDefault();
+                    })
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

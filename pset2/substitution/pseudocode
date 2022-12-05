@@ -1,0 +1,29 @@
+            1.  Get key
+
+                check: one argument,
+
+            2.  Validate key
+
+                check: not 26 characters, not alphabetic, repetitive
+
+            3. Get plaintext
+
+            4. Encipher
+
+                check: should work whether the key is mixed
+
+            5. Print ciphertext
+
+
+                   1. check single command-line argument
+                      if not print "Usage: ./substitution key"
+                      return 1
+
+                   2. check length(26): argv[1]
+                            alphabetic: isalpha
+                            repetition: 1. convert key to lowercase
+                                        2. use double loop and if to check
+
+
+
+

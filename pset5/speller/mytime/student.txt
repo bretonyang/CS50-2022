@@ -1,0 +1,4 @@
+My time :
+Total       Load        Check       Unload
+
+5.45s       0.84s       4.44s       0.28s
