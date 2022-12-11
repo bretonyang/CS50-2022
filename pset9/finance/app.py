@@ -1,5 +1,3 @@
-# API_KEY=pk_b667c826945741a48239eda25ed474ee
-
 import os
 
 from cs50 import SQL
