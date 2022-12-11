@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <p>
+      A share of {{ quote.name }} ({{ quote.symbol }}) costs {{ quote.price | usd }}.
+    </p>
+    <a class="btn btn-primary" href="/quote">Back to quote</a>
+{% endblock %}
